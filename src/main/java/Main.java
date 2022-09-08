@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] arg){
-        int opcion = 0, nodo = 0;
+        int opcion = 0;
         Scanner sc = new Scanner(System.in);
         Pila pila = new Pila();
 
@@ -21,15 +21,29 @@ public class Main {
 
                 switch (opcion){
                     case 1:
-
+                        System.out.println("Inserta el valor a guardar: ");
+                        pila.insertarNodo(sc.nextInt);
                         break;
                     case 2:
+                        if (!pila.pilaVacia()){
+                            System.out.println("Se ha eliminado un nodo con el valor: " + pila.eliminarNodo());
+                        }else
+                            System.out.println("La pila esta vacia");
                         break;
                     case 3:
+                        if (!pila.pilaVacia()){
+                            System.out.println("La pila SÏ esta vacia");
+                        }else
+                            System.out.println("La pila NO esta vacia");
                         break;
                     case 4:
+                        if (!pila.pilaVacia()){
+                            System.out.println("El ultimo valor ingresado en la pila es: " + pila.mostrarUltimoValorIngresado());
+                        }else
+                            System.out.println("La pila esta vacia");
                         break;
                     case 5:
+                        System.out.println("La pila contiene "+ pila.TamanoPila() + " nodos");
                         break;
                     case 6:
                         if (!pila.pilaVacia()){
