@@ -20,6 +20,7 @@ public class Pila {
     //Metodo para eliminar un nodo de la pila
     public int eliminarNodo(){
         int auxiliar = ultimoValorIngresado.informacion;
+        ultimoValorIngresado = ultimoValorIngresado.siguente;
         tamano--;
         return auxiliar;
     }
