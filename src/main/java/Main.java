@@ -22,7 +22,7 @@ public class Main {
                 switch (opcion){
                     case 1:
                         System.out.println("Inserta el valor a guardar: ");
-                        pila.insertarNodo(sc.nextInt);
+                        pila.insertarNodo(sc.nextInt());
                         break;
                     case 2:
                         if (!pila.pilaVacia()){
@@ -43,7 +43,13 @@ public class Main {
                             System.out.println("La pila esta vacia");
                         break;
                     case 5:
-                        System.out.println("La pila contiene "+ pila.TamanoPila() + " nodos");
+                        if (!pila.pilaVacia()) {
+                            if (pila.tamanoPila() != 1)
+                                System.out.println("La pila contiene " + pila.tamanoPila() + " nodos");
+                            else
+                                System.out.println("La pila contiene " + pila.tamanoPila() + " nodo");
+                        }else
+                            System.out.println("La pila esta vacia");
                         break;
                     case 6:
                         if (!pila.pilaVacia()){
@@ -53,7 +59,10 @@ public class Main {
                             System.out.println("La pila esta vacia");
                         break;
                     case 7:
-                        pila.mostrarValores();
+                        if (!pila.pilaVacia())
+                            pila.mostrarValores();
+                        else
+                            System.out.println("La pila esta vacia");
                         break;
                     case 0:
                         System.out.println("Gracias por usar el programa");
