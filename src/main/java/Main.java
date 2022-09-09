@@ -31,8 +31,8 @@ public class Main {
                             System.out.println("La pila esta vacia");
                         break;
                     case 3:
-                        if (!pila.pilaVacia()){
-                            System.out.println("La pila SÏ esta vacia");
+                        if (pila.pilaVacia()){
+                            System.out.println("La pila SÍ esta vacia");
                         }else
                             System.out.println("La pila NO esta vacia");
                         break;

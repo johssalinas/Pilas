@@ -1,14 +1,17 @@
 public class Pila {
     private Nodo ultimoValorIngresado;
-    int tamano = 0;
+    int tamano;
     String lista = "";
     public Pila(){
         ultimoValorIngresado = null;
         tamano = 0;
     }
+    
+    //Metodo para conocer si la pila está vacia
     public boolean pilaVacia(){
         return ultimoValorIngresado == null;
     }
+    
     //Metodo para insertar un nodo en la pila
     public void insertarNodo(int nodo){
         Nodo nuevo_nodo = new Nodo (nodo);
@@ -24,20 +27,23 @@ public class Pila {
         tamano--;
         return auxiliar;
     }
+    
     //Metodo para conocer cual es el ultimo valor ingresado
     public int mostrarUltimoValorIngresado(){
         return ultimoValorIngresado.informacion;
     }
+    
     //Metodo para conocer el tamaño de la pila
     public int tamanoPila(){
         return tamano;
     }
+    
     //Metodo para vaciar Pila
     public void vaciasPila(){
-        while (!pilaVacia()){
+        while (!pilaVacia())
             eliminarNodo();
-        }
     }
+    
     //Metodo para mostrar el contenido de la Pila
     public void mostrarValores(){
         Nodo recorrido = ultimoValorIngresado;
